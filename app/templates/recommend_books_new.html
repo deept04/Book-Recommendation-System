@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Recommendation Using Personality Quiz</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style_new.css') }}">
+</head>
+<body>
+  <header class="scrolled">
+    <h1>Book Recommendation</h1>
+    <nav>
+      <ul>
+        <li><a href="#" onclick="redirectToHome()">Home</a></li>
+        <li><a href="" onclick="redirectToaboutus()"> About</a></li>
+<!--        <li><a href="#">Contact</a></li>-->
+        <li><a href="#" onclick="redirectTologin()">Login</a></li>
+      </ul>
+    </nav>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <div class="container">
+      <h1>Discover Your Perfect Book Match</h1>
+      <p>Take our personality quiz and get personalized book recommendations tailored to your unique taste.</p>
+    </div>
+  </div>
+
+  <div class="container section">
+    <h2>How It Works</h2>
+    <p>1. Take our fun and insightful personality quiz.</p>
+    <p>2. Based on your answers, we'll analyze your interests, preferences, and reading habits.</p>
+    <p>3. You'll receive a curated list of book recommendations just for you!</p>
+  </div>
+
+  <div class="container section">
+    <h2>Personality Quiz</h2>
+      <form id="quiz-form" class="quiz-form-d">
+          <label>Question 1: How do you handle stress?</label>
+          <div class="radio-options">
+              <label><input type="radio" id="q1a" name="q1" value="5"> Calm and collected</label>
+              <label><input type="radio" id="q1b" name="q1" value="2"> Stressed and anxious</label>
+              <label><input type="radio" id="q1c" name="q1" value="3"> Indifferent</label>
+              <label><input type="radio" id="q1d" name="q1" value="4"> Proactive</label>
+          </div>
+            <br><br>
+          <label>Question 2: How do you approach new challenges?</label>
+          <div class="radio-options">
+              <label><input type="radio" id="q2a" name="q2" value="5"> Excited and curious</label>
+              <label><input type="radio" id="q2b" name="q2" value="2"> Cautious and hesitant</label>
+              <label><input type="radio" id="q2c" name="q2" value="4"> Eager and determined</label>
+              <label><input type="radio" id="q2d" name="q2" value="3"> Adaptive and flexible</label>
+           </div>
+
+            <br><br>
+          <label>Question 3: How do you handle social situations?</label>
+          <div class="radio-options">
+              <label><input type="radio" id="q3a" name="q3" value="5"> Outgoing and sociable</label>
+              <label><input type="radio" id="q3b" name="q3" value="2"> Introverted and reserved</label>
+              <label><input type="radio" id="q3c" name="q3" value="2"> Friendly and approachable</label>
+              <label><input type="radio" id="q3d" name="q3" value="4"> Observant and analytical</label>
+           </div>
+
+           <br><br>
+          <label>Question 4: How do you react to unexpected changes?</label>
+          <div class="radio-options">
+              <label><input type="radio" id="q4a" name="q4" value="5"> Adaptable and open-minded</label>
+              <label><input type="radio" id="q4b" name="q4" value="2"> Resistant and uncomfortable</label>
+              <label><input type="radio" id="q4c" name="q4" value="2"> Intrigued and curious</label>
+              <label><input type="radio" id="q4d" name="q4" value="3"> Proactive and problem-solving</label>
+           </div>
+
+           <br><br>
+          <label>Question 5: How do you handle criticism?</label>
+          <div class="radio-options">
+              <label><input type="radio" id="q5a" name="q5" value="5"> Open to feedback and willing to improve</label>
+              <label><input type="radio" id="q5b" name="q5" value="2"> Defensive and sensitive</label>
+              <label><input type="radio" id="q5c" name="q5" value="3"> Analytical and considering the source</label>
+              <label><input type="radio" id="q5d" name="q5" value="4"> Take it positively and make necessary changes</label>
+           </div>
+            <br><br>
+          <label>Question 6: How do you prefer to work in a team?</label>
+        <div class="radio-options">
+            <label><input type="radio" id="q6a" name="q6" value="4"> Leading and coordinating</label>
+            <label><input type="radio" id="q6b" name="q6" value="5"> Contributing and collaborating</label>
+            <label><input type="radio" id="q6c" name="q6" value="5"> Observing and analyzing</label>
+            <label><input type="radio" id="q6d" name="q6" value="5"> Independent and self-reliant</label>
+        </div>
+            <br><br>
+        <label>Question 7: How do you approach your goals?</label>
+        <div class="radio-options">
+            <label><input type="radio" id="q7a" name="q7" value="5"> Set clear and structured plans</label>
+            <label><input type="radio" id="q7b" name="q7" value="5"> Adaptable and take opportunities as they come</label>
+            <label><input type="radio" id="q7c" name="q7" value="3"> Consistently work towards them</label>
+            <label><input type="radio" id="q7d" name="q7" value="2"> Anxious and unsure about your goals</label>
+        </div>
+        <br><br>
+        <label>Question 8: How do you react to failure?</label>
+        <div class="radio-options">
+            <label><input type="radio" id="q8a" name="q8" value="4"> Learn from it and try again</label>
+            <label><input type="radio" id="q8b" name="q8" value="2"> Feel discouraged and give up</label>
+            <label><input type="radio" id="q8c" name="q8" value="3"> Analyze what went wrong and make improvements</label>
+            <label><input type="radio" id="q8d" name="q8" value="5"> It's just a part of the process</label>
+        </div>
+        <br><br>
+        <label>Question 9: How do you deal with uncertainty?</label>
+        <div class="radio-options">
+            <label><input type="radio" id="q9a" name="q9" value="4"> Plan for different scenarios and stay prepared</label>
+            <label><input type="radio" id="q9b" name="q9" value="2"> Get anxious and worry about the unknown</label>
+            <label><input type="radio" id="q9c" name="q9" value="5"> Embrace it and see it as an opportunity</label>
+            <label><input type="radio" id="q9d" name="q9" value="3"> Analyze the situation and make informed decisions</label>
+        </div>
+        <br><br>
+        <label>Question 10: How do you approach your personal relationships?</label>
+        <div class="radio-options">
+            <label><input type="radio" id="q10a" name="q10" value="4"> Invest time and effort in maintaining close connections</label>
+            <label><input type="radio" id="q10b" name="q10" value="2"> Prefer to keep your circle small and intimate</label>
+            <label><input type="radio" id="q10c" name="q10" value="5"> Enjoy meeting new people and making friends easily</label>
+            <label><input type="radio" id="q10d" name="q10" value="3"> Value quality over quantity in your relationships</label>
+        </div>
+          <br><br><br><br>
+        <input type="submit" value="Get Recommendations" class="btn">
+    </form>
+  </div>
+
+  <div id="output"></div>
+
+  <div class="container section">
+    <h2>Recommended Books</h2>
+    <div class="book-grid">
+      <div id="books-images" class="book-card">
+<!--        <img src="21 Lessons for the 21st Century.jpg" alt="Book Cover">-->
+        <h3 id="result"></h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="testimonial">
+    <div class="container">
+      <blockquote>"This website changed my reading life! The personalized recommendations are spot-on, and I've discovered so many incredible books I never would have found on my own."</blockquote>
+      <cite>- Jane Doe, Book Lover</cite>
+    </div>
+  </div>
+
+  <div class="container section">
+    <div class="comment-section">
+      <h3>Leave a Comment</h3>
+      <form class="comment-form">
+        <input type="text" placeholder="Name" required>
+        <textarea placeholder="Your comment..." required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+      <div class="comment-list">
+        <div class="comment">
+          <p>This website is amazing! I've found so many great books through the recommendations.</p>
+          <p class="meta">- John Doe</p>
+        </div>
+        <div class="comment">
+          <p>I love the personality quiz! It really helps narrow down my preferences.</p>
+          <p class="meta">- Jane Smith</p>
+        </div>
+        <!-- Add more comments here -->
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Book Recommendation Using Personality Quiz</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="scroll-top"><i class="fas fa-angle-up"></i></a>
+<script src="{{ url_for('static', filename='js/quiz.js') }}"></script>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

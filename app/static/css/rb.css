@@ -1,0 +1,109 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+h2 {
+    text-align: center;
+    color: #ff6f61;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Quiz Form Styles */
+#quiz-form {
+    background-color: #cb6d6d;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.question {
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    color: #ff6f61;
+    margin-bottom: 10px;
+}
+
+input{
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+
+label {
+    line-height: 5.15vh;
+    margin-bottom: 5px;
+}
+
+label:hover{
+    cursor: pointer;
+    color: #ff4d4d;
+}
+
+input:active label{
+    color: #ff4d4d;
+}
+
+input[type="submit"] {
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px 20px;
+    background-color: #ff6f61;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+input[type=radio]:checked {
+    /* box-shadow:red 0px 0px 0px 2px; */
+    border: 2px solid #ff4d4d;
+    border-radius: 50%;
+}
+
+input[type="submit"]:hover {
+    background-color: #ff4d4d;
+}
+
+
+
+/* Result Styles */
+/* #result {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #ffbd7d;
+    color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+} */
+
+/* #fetched_books {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #9ff7b9;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+} */

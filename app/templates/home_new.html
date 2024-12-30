@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Recommendation Using Personality Quiz</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style_new.css') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+<body>
+  <header class="scrolled">
+    <h1>Book Recommendation</h1>
+    <nav>
+      <ul>
+        <li><a href="#" onclick="redirectToHome()">Home</a></li>
+        <li><a href="" onclick="redirectToaboutus()"> About</a></li>
+<!--        <li><a href="#">Contact</a></li>-->
+        <li><a href="#" onclick="redirectTologin()">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <div class="container">
+      <h1>Discover Your Perfect Book Match</h1>
+      <p>Take our personality quiz and get personalized book recommendations tailored to your unique taste.</p>
+      <button class="btn" onclick="redirectToRecommendBooks()">Take the Quiz</button>
+    </div>
+  </div>
+
+  <div class="container section">
+    <h2>Quizzes Taken</h2>
+       {% for quiz in quiz_list %}
+            <div class="book-grid">
+              <div class="book-card">
+                  {% for book in quiz.books %}
+                  <img src="/static/images/{{ book }}.jpg" alt="Book Cover", class="book-cover">
+                  {% endfor %}
+              <h3><strong> Result: </strong>{{ quiz.result }}</h3><p><strong> Time Taken: </strong>{{ quiz.timeTaken }}</p>
+              </div>
+            </div>
+        {% endfor %}
+      <!-- Add more book cards here -->
+  </div>
+
+<div class="container section">
+    <h2>Featured Books</h2>
+    <div class="book-grid">
+      <div class="book-card">
+        <img src="static\images\Atomic Habits.jpg" alt="Book Cover">
+        <h3>Atomic Habits : Tiny Changes </h3>
+       <p></p> <a href=" https://amzn.in/d/cQlcyl2">Buy Now From Here.</a>
+     </div>
+     <div class="book-card">
+      <img src="static\images\Cosmos.jpg" alt="Book Cover">
+      <h3>Cosmos         </h3>
+     <p></p><a href="https://www.amazon.in/COSMOS-Carl-Sagan/dp/0349107033">Buy Now From Here.</a>
+   </div>
+   <div class="book-card">
+    <img src="static\images\Sapiens A Brief History of Humankind.jpg" alt="Book Cover">
+    <h3>Sapiens : A Brief History Of Human Kind </h3>
+   <p></p> <a href="https://www.amazon.in/Sapiens-Humankind-Yuval-Noah-Harari/dp/0099590085">Buy Now From Here.</a>
+ </div>
+ <div class="book-card">
+  <img src="static\images\How to Win Friends and Influence People.jpg" alt="Book Cover">
+  <h3>How To Win Friends And Influence People</h3>
+ <p></p> <a href="https://www.amazon.com/How-Win-Friends-Influence-People/dp/0671027034">Buy Now From Here.</a>
+</div>
+    </div>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Book Recommendation Using Personality Quiz</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+</div>
+  <a href="#" class="scroll-top"><i class="fas fa-angle-up"></i></a>
+
+</body>
+</html>

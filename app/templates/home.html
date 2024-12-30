@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Quizzes Taken</h2>
+        <ul id="quiz-list">
+            {% for quiz in quiz_list %}
+            <div class="quiz-item">
+            <li>
+                <p><strong>Time Taken:</strong> {{ quiz.timeTaken }}</p>
+<!--                <p><strong>Books:</strong> {{ quiz.books|join('<br>') }}</p>-->
+                <p><strong>Recommended Books:</strong></p>
+                <ul class="books-list">
+                    {% for book in quiz.books %}
+                        <li>{{ book }}</li>
+                    {% endfor %}
+                </ul>
+                <p><strong>Result:</strong> {{ quiz.result }}</p>
+                <button class="show-result-btn" onclick="showResult('{{ quiz.id }}')">Show Result</button>
+            </li></div>
+            {% endfor %}
+        </ul>
+    </div>
+    <button class="recommend-books-btn" onclick="redirectToRecommendBooks()">Recommend Books</button>
+</body>
+</html>

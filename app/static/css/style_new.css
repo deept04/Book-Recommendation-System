@@ -1,0 +1,420 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  background-color: #faf1d8;
+}
+
+header {
+  background-color: #ffffff;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+header.scrolled {
+  background-color: #57380a;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #f3bd6e;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-top: 100px;
+}
+
+.hero {
+  background-image: url('https://source.unsplash.com/1600x900/?books');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+  font-size: 24px;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.btn {
+  display: inline-block;
+  background-color: #57380a;
+  color: #fff;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ff6347;
+  z-index: -1;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #996d2c;
+}
+
+.section {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #57380a;
+}
+
+.quiz-form-d {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.quiz-form-d label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #57380a;
+}
+
+.quiz-form-d input[type="text"],
+.quiz-form-d textarea,
+.quiz-form-d select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #57380a;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.book-card {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.book-card img {
+  max-width: 50%;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+.testimonial {
+  background-color: #fff;
+  padding: 40px;
+  text-align: center;
+  font-style: italic;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial blockquote {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #57380a;
+}
+
+.testimonial cite {
+  font-weight: bold;
+  color: #57380a;
+}
+
+.comment-section {
+  background-color: #fff;
+  padding: 40px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.comment-section h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #57380a;
+}
+
+.comment-form input[type="text"],
+.comment-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #57380a;box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.comment-form button {
+  background-color: #ff6347;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.comment-form button:hover {
+  background-color: #ff4d2e;
+}
+
+.comment-list {
+  margin-top: 20px;
+}
+
+.comment {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.comment p {
+  margin-bottom: 5px;
+  flex: 1;
+}
+
+.comment .meta {
+  font-size: 12px;
+  color: #888;
+  margin-left: 10px;
+}
+
+footer {
+  background-color: #57380a;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  margin: 2rem auto;
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+footer p {
+  margin-bottom: 10px;
+}
+
+.social-icons a {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {color: #ff6347;
+}
+
+.scroll-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ff6347;
+  color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.scroll-top:hover {
+  background-color: #ff4d2e;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .hero {
+    padding: 50px 0;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero p {
+    font-size: 20px;
+  }
+
+  .section h2 {
+    font-size: 30px;
+  }
+
+  .quiz-form-d {
+    max-width: 100%;
+  }
+
+  .book-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .book-card {
+    padding: 10px;
+  }
+
+  .book-card img {
+    max-height: 200px;
+  }
+
+  .testimonial {
+    padding: 30px;
+  }
+
+  .testimonial blockquote {
+    font-size: 20px;
+  }
+
+  .comment-section {
+    padding: 30px;
+  }
+
+  footer {
+    padding: 10px;
+  }
+
+  footer p {
+    font-size: 16px;
+  }
+
+  .scroll-top {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+  }
+}
+
+.book-cover {
+    width: 200px; /* Set the desired width */
+    height: auto; /* Automatically adjust height to maintain aspect ratio */
+}
+
+/* mcq's css */
+
+.question-container {
+    margin-bottom: 20px;
+}
+
+.question {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.options {
+    margin-left: 20px; /* Adjust as needed */
+}
+
+.options label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.quiz-form-d button {
+    margin-top: 20px;
+}

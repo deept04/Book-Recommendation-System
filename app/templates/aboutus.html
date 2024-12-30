@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <style>
+    /* Reset styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: white;
+       color: #222222;
+    }
+
+    .container {
+      /* max-width: 200px;
+      margin: 0 auto;*/
+      padding: 100px;
+      background-color: #FAF1D8;
+      /* backdrop-filter: blur(9px); */
+      animation: fadeIn 1s;
+
+    }
+
+
+    @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+    .about-section {
+      /* background-color: #fff; */
+      border: 2px black solid;
+      padding: 40px;
+      border-radius: 8px;
+      /* backdrop-filter: blur(9px); */
+      /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); */
+      background-color: white;
+    }
+
+    .about-section h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #111111;
+      font-size: 2.5rem;
+      text-transform: uppercase;
+    }
+
+    .about-section p {
+      margin-bottom: 20px;
+      line-height: 1.6;
+      text-align: justify;
+      color: rgb(14, 13, 13);
+      font-size: 20px;
+    }
+
+    .team-members {
+
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .team-member {
+      text-align: center;
+      margin: 0 20px;
+      margin-bottom: 40px;
+    }
+
+    .team-member img {
+      width: 200px;
+      height: 200px;
+      /* border-radius: 50%; */
+      margin-bottom: 20px;
+      border: 2px solid #797575;
+      /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    }
+
+    .team-member img:hover {
+      border: 2px black solid;
+
+    .team-member h3 {
+      color: #333;
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+    }
+
+    .team-member p {
+      color: #363333;
+      font-size: 1.2rem;
+      text-align: center;
+    }
+
+
+    .quote {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 30px;
+      color: #9b9595;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="about-section">
+    <h2>About Us</h2>
+    <p>Welcome to our book recommendation website using personality quiz! We are dedicated to helping you discover your next favorite read.</p>
+
+    <div class="quote">
+      <p>"Books are uniquely portable magic." - Stephen King</p>
+    </div>
+
+    <div class="team-members">
+      <div class="team-member">
+        <img src="leader.jpg" alt="Leader">
+        <h3>DEV TRIVEDI</h3><br>
+        <p>Leader</p>
+      </div>
+
+      <div class="team-member">
+        <img src="WhatsApp Image 2024-04-23 at 21.29.35_6f0de2f9.jpg" alt="Team Member 1">
+        <h3>DEEP THAKAR</h3>
+        <p>Team Member</p>
+      </div>
+
+      <div class="team-member">
+        <img src="team-member2.jpg" alt="Team Member 2">
+        <h3>DARSH SHAH</h3>
+        <p>Team Member</p>
+      </div>
+
+      <div class="team-member">
+        <img src="team-member3.jpg" alt="Team Member 3">
+        <h3>DHWANI DASADIA</h3>
+        <p>Team Member</p>
+      </div>
+
+      <div class="team-member">
+        <img src="bhoom.jpg" alt="Team Member 4">
+        <h3>BHOOMIKA MAKWANA</h3>
+        <p>Team Member</p>
+      </div>
+
+      <div class="team-member">
+<!--        <img src="priyanshi.jpg" alt="Team Member 5">-->
+        <h3>PRIYANSHI THUMAR</h3>
+        <p>Team Member</p>
+      </div>
+    </div>
+
+    <p><b>Our team is passionate about connecting readers with books that ignite their imagination, challenge their perspectives, and transport them to new worlds. With a curated selection spanning various genres, authors, and styles, we aim to inspire and delight readers of all ages and backgrounds.</b></p>
+
+    <p><b>Whether you're an avid bibliophile seeking your next literary adventure or a casual reader looking for your next page-turner, our website is here to guide you on your journey through the world of literature.</b></p>
+  </div>
+</div>
+
+</body>
+</html>

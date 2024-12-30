@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Recommendation Using Personality Quiz</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style_new.css') }}">
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+<body>
+  <header class="scrolled">
+    <h1>Book Recommendation</h1>
+    <nav>
+      <ul>
+        <li><a href="#" onclick="redirectToHome()">Home</a></li>
+        <li><a href="#" onclick="redirectToaboutus()"> About</a></li>
+<!--        <li><a href="#">Contact</a></li>-->
+        <li><a href="#" onclick="redirectTologin()">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container section">
+    <h2>How It Works</h2>
+    <p>1. Take our fun and insightful personality quiz.</p>
+    <p>2. Based on your answers, we'll analyze your interests, preferences, and reading habits.</p>
+    <p>3. You'll receive a curated list of book recommendations just for you!</p>
+  </div>
+
+  <div class="container section" id="quiz">
+    <h2>Login To Take Quiz</h2>
+    <form class="quiz-form-d" action="/login" method="post">
+
+      <label for="userid">UserName:</label>
+      <input type="text" id="userid" name="userid" required>
+
+      <label for="password">Password:</label>
+      <input type="text" id="password" name="password" required>
+
+      <input type="submit" value="Login" class ="btn">
+<!--      <button type="submit" class="btn">Get Recommendations</button>-->
+    </form>
+  </div>
+
+  <div class="testimonial">
+    <div class="container">
+      <blockquote>"This website changed my reading life! The personalized recommendations are spot-on, and I've discovered so many incredible books I never would have found on my own."</blockquote>
+      <cite>- Jane Doe, Book Lover</cite>
+    </div>
+  </div>
+
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Book Recommendation Using Personality Quiz</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="scroll-top"><i class="fas fa-angle-up"></i></a>
+</body>
+</html>
